@@ -5,12 +5,8 @@ Este é um plugin WordPress focado na segurança, projetado para melhorar a segu
 ## Instalação
 Siga as etapas abaixo para instalar e ativar o plugin:
 
-### Opção 1: Usando o Composer
-Para instalar usando o Composer, execute o seguinte comando no diretório wp-content/plugins do seu WordPress:
 
-`composer require studiovisual/secure-session-cookies`
-
-### Opção 2: Manualmente
+### Manualmente
 1. Baixe o arquivo ZIP do plugin.
 2. Extraia o conteúdo na pasta wp-content/plugins do seu WordPress.
 3. Acesse o painel administrativo do WordPress e ative o plugin na seção 'Plugins'.
