@@ -1,19 +1,28 @@
 <?php
 
-namespace StarterPlugin;
+namespace StudioVisual\Cookies;
 
-use StarterPlugin\Controllers\Admin;
+use StudioVisual\Cookies\Controllers\CookieController;
 
-Class App {
-    
-    // Plugin name
-    static $name = 'Starter plugin';
-    // Plugin path
-    static $path = WP_PLUGIN_DIR . '/starter-plugin';
+class App {
 
     public function __construct() {
-        // Controllers
-       new Admin;
+        new CookieController();
     }
 
+    /**
+     * Active plugin
+     * @return void
+     */
+    public static function activate(): void {
+        update_option('rewrite_rules', '');
+    }
+
+    /**
+     * Deactive plugin
+     * @return void
+     */
+    public static function deactivate(): void {
+        flush_rewrite_rules();
+    }
 }
